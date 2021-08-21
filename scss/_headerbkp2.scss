@@ -1,0 +1,112 @@
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  font-family: var(--ff);
+  gap: 4vh;
+  height: max-content;
+  justify-content: center;
+  min-height: 100vh;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  max-width: 1200px;
+  margin: auto;
+
+  .header-img-mobile {
+    width: 40vw;
+
+    @media (min-width: 50rem) {
+      display: none;
+    }
+  }
+
+  .header-img-desktop {
+    display: none;
+    width: 60vw;
+
+    @media (min-width: 50rem) {
+      display: unset;
+    }
+  }
+
+  .header-left  {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      color: var(--clr-gray-lit);
+      font-size: 6vw;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 6vw;
+      text-align: center;
+
+      span:nth-child(1) {
+        color: var(--clr-primary-med);
+      }
+
+      span:nth-child(4) {
+        color: var(--clr-secondary-med);
+      }
+    }
+
+    p {
+      color: var(--clr-gray-lit);
+      font-size: 3vw;
+      font-weight: 400;
+      margin-bottom: 5vw;
+      max-width: 45ch;
+      text-align: center;
+    }
+
+    a {
+      border: 0.25em var(--clr-primary-med) solid;
+      border-radius: 5vw;
+      color: var(--clr-gray-lit);
+      font-size: 3vw;
+      font-weight: 700;
+      padding: 0.75em;
+      text-align: center;
+      text-decoration: none;
+      transition-property: color, background-color, border;
+      transition-duration: 0.3s;
+      width: 30vw;
+
+      &:hover {
+        background-color: var(--clr-gray-lit);
+        border-color: var(--clr-gray-lit);
+        color: var(--clr-gray-drk);
+      }
+    }
+
+    .header-links {
+      display: flex;
+      gap: 5vw;
+      justify-content: center;
+      margin-bottom: 5vw;
+      width: 100%;
+
+      a {
+        background-color: var(--clr-primary-med);
+        border-color: var(--clr-primary-med);
+        color: var(--clr-gray-drk);
+        
+        &:hover {
+          background-color: var(--clr-primary-lit);
+          border-color: var(--clr-primary-lit);
+        }
+      }
+    }
+
+    a:focus {
+      background-color: var(--clr-primary-lit);
+      border-color: var(--clr-primary-lit);
+      box-shadow:
+        0 0 0 0.4rem var(--clr-gray-drk),
+        0 0 0 0.8rem var(--clr-primary-med);
+      color: var(--clr-gray-drk);
+      outline: none;
+    }
+  }
+}

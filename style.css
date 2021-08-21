@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+  --clr-primary-lit: hsl(197, 62%, 90%);
+  --clr-primary-med: hsl(197, 62%, 65%);
+  --clr-primary-drk: hsl(197, 62%, 40%);
+
+  --clr-secondary-lit: hsl(31, 100%, 86%);
+  --clr-secondary-med: hsl(31, 100%, 61%);
+  --clr-secondary-drk: hsl(31, 100%, 36%);
+
+  --clr-gray-lit: hsl(0, 0%, 98%);
+  --clr-gray-med: hsl(0, 0%, 58%);
+  --clr-gray-drk: hsl(0, 0%, 18%);
+
+  --ff-sans-serif: 'Quicksand', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-gray-drk);
+}
+
+header {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  font-family: var(--ff-sans-serif);
+  gap: 4rem;
+  height: max-content;
+  justify-content: center;
+  margin: auto;
+  max-width: 1440px;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  width: 90vw;
+}
+
+header img {
+  width: 30rem;
+}
+
+h1 {
+  color: var(--clr-gray-lit);
+  font-size: 3rem;
+  font-weight: 550;
+  line-height: 3.5rem;
+  margin-bottom: 3rem;
+}
+
+h1 span:nth-child(1) {
+  color: var(--clr-primary-med);
+}
+
+h1 span:nth-child(4) {
+  color: var(--clr-secondary-med);
+}
+
+header p {
+  color: var(--clr-gray-lit);
+  font-size: 1.4rem;
+  font-weight: 300;
+  max-width: 45ch;
+  margin-bottom: 6rem;
+}
+
+.header-links {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-links a {
+  border: 0.25rem var(--clr-primary-med) solid;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  transition-property: color, background-color, border;
+  transition-duration: 0.5s;  
+  width: 12.5rem;
+}
+
+.header-links a:nth-child(1) {
+  background-color: var(--clr-primary-med);
+  color: var(--clr-gray-drk);
+}
+
+.header-links a:nth-child(1):hover {
+  background-color: var(--clr-primary-lit);
+  border: 0.25rem var(--clr-primary-lit) solid;
+}
+
+.header-links a:nth-child(2) {
+  color: var(--clr-gray-lit);
+}
+
+.header-links a:nth-child(2):hover {
+  background-color: var(--clr-primary-lit);
+  border: 0.25rem var(--clr-primary-lit) solid;
+  color: var(--clr-gray-drk);
+}
+
+.header-links a:nth-child(2):focus {
+  background-color: var(--clr-primary-lit);
+}
+
+.header-links a:focus {
+  background-color: var(--clr-primary-lit);
+  border: 0.25rem var(--clr-primary-lit) solid;
+  box-shadow:
+    0 0 0 0.4rem var(--clr-gray-drk),
+    0 0 0 0.8rem var(--clr-primary-med);
+  color: var(--clr-gray-drk);
+  outline: none;
+}
