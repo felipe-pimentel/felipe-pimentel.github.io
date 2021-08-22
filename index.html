@@ -2,9 +2,65 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe Pimentel | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Em Breve... || Soon...</h1>
+    <header>
+      <h1 class="logo">&lt;FelipePimentel /&gt;</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="iconify nav-open" data-icon="cil:hamburger-menu" data-width="2.5rem"></span>
+        <span class="iconify nav-close" data-icon="cil:x" data-width="2.5rem"></span>
+      </label>
+      <nav>
+        <ul style="--nav-length: 4;">
+          <li style="--nav-index: 0;"><a href="#about">Sobre Mim</a></li>
+          <li style="--nav-index: 1;"><a href="#frontend">Front-End</a></li>
+          <li style="--nav-index: 2;"><a href="#backend">Back-End</a></li>
+          <li style="--nav-index: 3;"><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="about" class="about">
+      <h2>Sobre Mim</h2>
+    </section>
+    <section id="frontend" class="frontend">
+      <div class="frontend-title">
+        <h2>Front-End</h2>
+      </div>
+      <div class="frontend-skills">
+        <span class="iconify" data-icon="cib:html5" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:css3" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:sass-alt" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:javascript" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:react" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:redux" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:next-js" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:figma" data-width="3.75rem"></span>
+      </div>
+      <div class="frontend-projects"></div>
+    </section>
+    <section id="backend" class="backend">
+      <div class="backend-title">
+        <h2>Back-End</h2>
+      </div>
+      <div class="backend-skills">
+        <span class="iconify" data-icon="grommet-icons:node" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:npm" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="simple-icons:express" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:socket-io" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:mysql" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="simple-icons:sequelize" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="simple-icons:mongodb" data-width="3.75rem"></span>
+        <span class="iconify" data-icon="cib:heroku" data-width="3.75rem"></span>
+      </div>
+      <div class="backend-projects"></div>
+    </section>
+    <form id="contact" class="contact"></form>
+
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   </body>
 </html>
