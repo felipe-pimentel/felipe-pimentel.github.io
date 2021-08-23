@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding: 4rem;
+}
+
+main {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, auto);
+  width: clamp(20rem, 100%, 80rem);
+}
+
+@media screen and (min-width: 37.5rem) {
+  * {
+    scroll-padding: 0;
+  }
+
+  main {
+    grid-template-columns: 2.5rem 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 52.5rem) {
+  main {
+    grid-template-columns: 2.5rem 25rem 1fr;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  position: sticky;
+  top: 0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsla(180, 100%, 25%, 0.3);
+  background-color: hsla(180, 100%, 25%, 1);
+  height: 4rem;
+  color: white;
+}
+
+.nav-toggle-label {
+  height: 4rem;
+  display: flex;
+  place-items: center;
+}
+
+.nav-toggle-label svg {
+  transition: ease-in-out 0.2s;
+}
+
+nav {
+  background-color: hsla(180, 100%, 25%, 0.3);
+  background-color: hsla(180, 100%, 25%, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  transform-origin: top;
+  transform: scale(1, 0);
+  transition: transform 0.2s ease-in-out;
+}
+
+nav a {
+  font-size: 2rem;
+  line-height: 4rem;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+nav a:hover {
+  background-color: hsl(180, 100%, 40%);
+}
+
+.nav-toggle {
+  transform: scale(0);
+  position: absolute;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ div label svg {
+  transform: rotate(-180deg);
+}
+
+section {
+  border: solid 1px black;
+  min-height: 100vh;
+  grid-column: 1 / 2;
+}
+
+.hero {
+  grid-row: 1 / 2;
+}
+
+footer {
+  height: 10rem;
+  background-color: #333;
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+}
+
+@media screen and (min-width: 37.5rem) {
+  header {
+  grid-column: 2 / 3;
+  }
+
+  section {
+    grid-column: 3 / 4;
+  }
+
+  footer {
+    grid-column: 1 / 4;
+  }
+}
