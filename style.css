@@ -1,9 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --clr-main-bg: hsl(32, 38%, 91%);
+  --clr-main-text: hsl(230, 8%, 16%);
+  --clr-header-bg: hsl(0, 11%, 26%);
+  --clr-header-text: white;
+  --clr-nav-bg-0: hsl(0, 11%, 26%);
+  --clr-nav-bg-1: hsl(12, 24%, 46%);
+  --clr-nav-bg-2: hsl(30, 87%, 66%);
+  --clr-nav-gradient: linear-gradient(180deg, var(--clr-nav-bg-0) 0%, var(--clr-nav-bg-1) 80%, var(--clr-nav-bg-2) 100%);
+  --clr-nav-bg-hover: hsl(30, 87%, 86%);
+  --clr-nav-text-hover: black;
+  --clr-btn-cta: hsl(30, 87%, 66%);
+  --clr-btn-cta-hover: hsl(30, 87%, 86%);
+  --clr-footer-bg: hsl(230, 8%, 16%);
+  --clr-footer-text: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   scroll-padding: 4rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  /* background-color: #DFDCD3;
+  background-color: #EAE8E1;
+  background-color: #050123;
+  background-color: #13295A; */
+  background-color: var(--clr-main-bg);
+  color: var(--clr-main-text);
+}
+
+.dark {
+  --clr-main-bg: hsl(213, 65%, 15%);
+  --clr-main-text: white;
+  --clr-header-bg: hsl(341, 56%, 49%);
+  --clr-header-text: white;
+  --clr-nav-bg-0: hsl(341, 56%, 49%);
+  --clr-nav-bg-1: hsl(234, 59%, 28%);
+  --clr-nav-gradient: linear-gradient(180deg, var(--clr-nav-bg-0) 0%, var(--clr-nav-bg-1) 100%);
+  --clr-nav-bg-hover: hsl(234, 59%, 90%);
+  --clr-nav-text-hover: black;
+  --clr-btn-cta: hsl(341, 56%, 49%);
+  --clr-btn-cta-hover: hsl(341, 56%, 69%);
+  --clr-footer-bg: hsl(352, 66%, 65%);
+  --clr-footer-text: black;
 }
 
 main {
@@ -45,10 +90,15 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: hsla(180, 100%, 25%, 0.3);
+  /* background-color: hsla(180, 100%, 25%, 0.3);
   background-color: hsla(180, 100%, 25%, 1);
+  background-color: hsla(216, 29%, 27%, 1);
+  background-color: hsla(209, 31%, 18%, 1); */
+  background-color: var(--clr-header-bg);
   height: 4rem;
-  color: white;
+  color: var(--clr-header-text);
+  font-weight: 700;
+  font-style: italic;
 }
 
 .nav-toggle-label {
@@ -62,8 +112,11 @@ header {
 }
 
 nav {
-  background-color: hsla(180, 100%, 25%, 0.3);
+  /* background-color: hsla(180, 100%, 25%, 0.3);
   background-color: hsla(180, 100%, 25%, 1);
+  background-color: hsla(216, 29%, 27%, 1);
+  background: linear-gradient(180deg, hsl(209, 31%, 18%) 0%, hsl(200, 53%, 33%) 70%, hsl(197, 38%, 52%) 100%); */
+  background: var(--clr-nav-gradient);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,15 +129,24 @@ nav {
 
 nav a {
   font-size: 2rem;
-  line-height: 4rem;
+  font-weight: 100;
+  line-height: 5rem;
   text-decoration: none;
   text-align: center;
+  text-transform: lowercase;
   color: white;
   width: 100%;
 }
 
 nav a:hover {
-  background-color: hsl(180, 100%, 40%);
+  /* background-color: hsl(180, 100%, 40%);
+  background-color: hsla(216, 29%, 40%, 1);
+  background-color: #534C79;
+  background-color: #373159;
+  background-color: #91F2F8;
+  color: black; */
+  background-color: var(--clr-nav-bg-hover);
+  color: var(--clr-nav-text-hover);
 }
 
 .nav-toggle {
@@ -110,9 +172,19 @@ section {
   grid-row: 1 / 2;
 }
 
+.contact {
+  min-height: calc(100vh - 10rem);
+}
+
 footer {
   height: 10rem;
-  background-color: #333;
+  /* background-color: #333;
+  background-color: #806B5A;
+  background-color: #D32D43;
+  background-color: #ED006C;
+  background-color: #F06373; */
+  background-color: var(--clr-footer-bg);
+  color: var(--clr-footer-text);
   grid-column: 1 / 2;
   grid-row: 7 / 8;
 }
@@ -128,5 +200,23 @@ footer {
 
   footer {
     grid-column: 1 / 4;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-main-bg: hsl(213, 65%, 15%);
+    --clr-main-text: white;
+    --clr-header-bg: hsl(341, 56%, 49%);
+    --clr-header-text: white;
+    --clr-nav-bg-0: hsl(341, 56%, 49%);
+    --clr-nav-bg-1: hsl(234, 59%, 28%);
+    --clr-nav-gradient: linear-gradient(180deg, var(--clr-nav-bg-0) 0%, var(--clr-nav-bg-1) 100%);
+    --clr-nav-bg-hover: hsl(234, 59%, 90%);
+    --clr-nav-text-hover: black;
+    --clr-btn-cta: hsl(341, 56%, 49%);
+    --clr-btn-cta-hover: hsl(341, 56%, 69%);
+    --clr-footer-bg: hsl(352, 66%, 65%);
+    --clr-footer-text: black;
   }
 }
