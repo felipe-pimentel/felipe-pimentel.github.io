@@ -1,8 +1,25 @@
 import styled from 'styled-components';
-import {StyledSection} from './Section';
+import {
+  StyledSection,
+  SectionTitleWrapper,
+  SectionTitle,
+  SectionTitleSpan,
+  SectionTitleSpanMobile,
+  SectionContentWrapper
+} from './Section';
 
 export default function Projects() {
   return (
-    <StyledSection>PROJECTS</StyledSection>
+    <StyledSection>
+      <SectionTitleWrapper>
+        <SectionTitle>
+          <SectionTitleSpanMobile>PROJETOS <span>/</span> PROJECTS</SectionTitleSpanMobile>
+          <SectionTitleSpan>PROJETOS <span>/</span></SectionTitleSpan>
+          <SectionTitleSpan>PROJECTS</SectionTitleSpan>
+        </SectionTitle>
+      </SectionTitleWrapper>
+      <SectionContentWrapper>
+      </SectionContentWrapper>
+    </StyledSection>
   );
 }

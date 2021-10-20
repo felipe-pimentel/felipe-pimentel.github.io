@@ -69,6 +69,10 @@ export const SectionTitleSpanMobile = styled.span`
   @media screen and (min-width: 37.5rem) {
     display: none;
   }
+
+  & > span {
+    color: ${ ({ theme }) => theme.colors.accent() };
+  }
 `;
 
 export const SectionTitleSpan = styled.span`
@@ -76,6 +80,10 @@ export const SectionTitleSpan = styled.span`
 
   @media screen and (min-width: 37.5rem) {
     display: initial;
+  }
+
+  & > span {
+    color: ${ ({ theme }) => theme.colors.accent() };
   }
 `;
 

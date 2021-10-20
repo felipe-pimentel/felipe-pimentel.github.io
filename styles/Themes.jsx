@@ -1,8 +1,8 @@
 export const lightTheme = {
   colors: {
-    background: (a = 1, l = 91, s = 38, h = 32) => `hsla(${h}, ${s}%, ${l}%, ${a})`,
-    content: (a = 1, l = 16, s = 7, h = 230) => `hsla(${h}, ${s}%, ${l}%, ${a})`,
-    accent: (a = 1, l = 40, s = 95, h = 30) => `hsla(${h}, ${s}%, ${l}%, ${a})`,
+    background: (a = 1) => `hsla(32, 38%, 91%, ${a})`,
+    content: (a = 1) => `hsla(230, 7%, 16%, ${a})`,
+    accent: (a = 1) => `hsla(30, 95%, 40%, ${a})`,
     // eu poderia usar apenas "white: 'white'", mas como os outros utilizam funções,
     // decidi manter o mesmo padrão para evitar possíveis confusões no futuro
     white: () => 'white',
@@ -11,9 +11,9 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
-    background: (a = 1, l = 15, s = 65, h = 213) => `hsla(${h}, ${s}%, ${l}%, ${a})`,
-    content: (a = 1, l = 100, s = 0, h = 0) => `hsla(${h}, ${s}%, ${l}%, ${a})`,
-    accent: (a = 1, l = 49, s = 56, h = 341) => `hsla(${h}, ${s}%, ${l}%, ${a})`,
+    background: (a = 1) => `hsla(213, 65%, 15%, ${a})`,
+    content: (a = 1) => `hsla(0, 0%, 100%, ${a})`,
+    accent: (a = 1) => `hsla(341, 56%, 49%, ${a})`,
     white: () => 'white',
   },
 };

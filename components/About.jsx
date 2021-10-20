@@ -26,8 +26,8 @@ export default function About() {
     <StyledSection>
       <SectionTitleWrapper>
         <SectionTitle>
-          <SectionTitleSpanMobile>SOBRE / ABOUT</SectionTitleSpanMobile>
-          <SectionTitleSpan>SOBRE /</SectionTitleSpan>
+          <SectionTitleSpanMobile>SOBRE <span>/</span> ABOUT</SectionTitleSpanMobile>
+          <SectionTitleSpan>SOBRE <span>/</span></SectionTitleSpan>
           <SectionTitleSpan>ABOUT</SectionTitleSpan>
         </SectionTitle>
       </SectionTitleWrapper>

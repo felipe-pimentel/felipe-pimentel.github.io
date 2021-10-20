@@ -14,8 +14,8 @@ export default function Skills({ skillsList }) {
     <StyledSection>
       <SectionTitleWrapper>
         <SectionTitle>
-          <SectionTitleSpanMobile>HABILIDADES / SKILLS</SectionTitleSpanMobile>
-          <SectionTitleSpan>HABILIDADES /</SectionTitleSpan>
+          <SectionTitleSpanMobile>HABILIDADES <span>/</span> SKILLS</SectionTitleSpanMobile>
+          <SectionTitleSpan>HABILIDADES <span>/</span></SectionTitleSpan>
           <SectionTitleSpan>SKILLS</SectionTitleSpan>
         </SectionTitle>
       </SectionTitleWrapper>

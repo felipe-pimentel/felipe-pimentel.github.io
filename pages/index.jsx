@@ -6,18 +6,7 @@ import Contact from '../components/Contact';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
-
-const Title = styled.h1`
-  font-size: 2.5rem;
-  line-height: 2;
-  text-align: center;
-  color: ${ ({ theme }) => theme.colors.content() };
-  height: 100vh;
-
-  @media screen and (min-width: 37.5rem) {
-    grid-column: span 3;
-  }
-`
+import Footer from '../components/Footer';
 
 const Main = styled.main`
   display: grid;
@@ -48,7 +37,7 @@ export default function Home({ toggleTheme, skillsList }) {
         <Skills skillsList={ skillsList } />
         <Projects />
         <Contact />
-        <Title>FOOTER</Title>
+        <Footer>FOOTER</Footer>
       </Main>
     </>
   );
