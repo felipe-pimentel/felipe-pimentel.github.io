@@ -1,8 +1,33 @@
 import styled from 'styled-components';
-import {StyledSection} from './Section';
+import {
+  StyledSection,
+  SectionTitleWrapper,
+  SectionTitle,
+  SectionTitleSpan,
+  SectionTitleSpanMobile,
+  SectionContentWrapper
+} from './Section';
+import SkillsList from './SkillsList';
 
-export default function Skills() {
+export default function Skills({ skillsList }) {
   return (
-    <StyledSection>SKILLS</StyledSection>
+    <StyledSection>
+      <SectionTitleWrapper>
+        <SectionTitle>
+          <SectionTitleSpanMobile>HABILIDADES / SKILLS</SectionTitleSpanMobile>
+          <SectionTitleSpan>HABILIDADES /</SectionTitleSpan>
+          <SectionTitleSpan>SKILLS</SectionTitleSpan>
+        </SectionTitle>
+      </SectionTitleWrapper>
+      <SectionContentWrapper>
+        { skillsList.map(([category, skills]) => (
+          <SkillsList
+            key={ category }
+            category={ category }
+            skills={ skills }
+          />
+        )) }
+      </SectionContentWrapper>
+    </StyledSection>
   );
 }

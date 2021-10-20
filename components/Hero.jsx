@@ -15,6 +15,10 @@ const HeroTitle = styled.h3`
   margin-bottom: 1.5rem;
   max-width: 40ch;
 
+  span {
+    color: ${ ({ theme }) => theme.colors.accent() };
+  }
+
   @media screen and (min-width: 37.5rem) {
     font-size: 2.5rem;
     margin-bottom: 1.75rem;
@@ -43,7 +47,7 @@ export default function Hero() {
         </SectionTitle>
       </SectionTitleWrapper>
       <SectionContentWrapper center>
-        <HeroTitle><p>Não é apenas sobre código.</p><p>É sobre encontrar a solução que você merece.</p></HeroTitle>
+        <HeroTitle><p>Não é apenas sobre código<span>.</span></p><p>É sobre encontrar a solução que você merece<span>.</span></p></HeroTitle>
         <HeroText>Olá! Meu nome é Felipe Pimentel e eu sou um desenvolvedor web full stack júnior do Rio de Janeiro.</HeroText>
       </SectionContentWrapper>
     </StyledSection>

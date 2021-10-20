@@ -13,10 +13,11 @@ const AboutText = styled.p`
   font-size: 1rem;
   line-height: 1.35;
   max-width: 50ch;
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
 
   @media screen and (min-width: 37.5rem) {
     font-size: 1.25rem;
+    margin-bottom: 1.5rem;
   }
 `;
 

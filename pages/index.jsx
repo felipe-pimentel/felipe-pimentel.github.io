@@ -35,7 +35,7 @@ const Main = styled.main`
   }
 `
 
-export default function Home({ toggleTheme }) {
+export default function Home({ toggleTheme, skillsList }) {
   return (
     <>
       <Main>
@@ -45,11 +45,21 @@ export default function Home({ toggleTheme }) {
         </Button>
         <Hero />
         <About />
-        <Skills />
+        <Skills skillsList={ skillsList } />
         <Projects />
         <Contact />
         <Title>FOOTER</Title>
       </Main>
     </>
   );
+}
+
+
+export async function getStaticProps() {
+  const skillsList = Object.entries(require('../skills'));
+  return {
+    props: {
+      skillsList,
+    }
+  }
 }
